@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Event = (props) => {
-    const {name, imageUrl, id} = props.event;
+    const {name, imageUrl} = props.event;
     // const imageAll = require(`../../images/${event.image}`);
     return (
         <div className="col-md-3">

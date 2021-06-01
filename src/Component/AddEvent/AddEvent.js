@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 
 const AddEvent = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const [imageUrl, setImageUrl] = useState(null);
     const onSubmit = data => {
         const eventData = {
@@ -29,9 +29,6 @@ const AddEvent = () => {
           .then(response =>  {
             setImageUrl(response.data.data.display_url);
           })
-          .catch(function (error) {
-            console.log(error);
-          });
     }
     return (
         <div className="container">
