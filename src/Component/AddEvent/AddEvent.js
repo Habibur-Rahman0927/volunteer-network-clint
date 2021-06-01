@@ -3,14 +3,13 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 
 const AddEvent = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
     const [imageUrl, setImageUrl] = useState(null);
     const onSubmit = data => {
         const eventData = {
             name: data.name,
             imageUrl:imageUrl
         }
-        console.log(eventData);
         fetch("https://stormy-fjord-03288.herokuapp.com/addEvent", {
             method : "POST",
             headers: {

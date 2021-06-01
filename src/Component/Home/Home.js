@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div className="row">
             {
-                events.map(event => <Event event={event}></Event>)
+                events.map((event, key) => <Event key={key} event={event}></Event>)
             }
         </div>
     );
