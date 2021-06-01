@@ -18,7 +18,6 @@ const AddEvent = () => {
             },
             body: JSON.stringify(eventData)
         })
-        .then(res => console.log('sever site respone'))
     };
     const handleImageUpload = event => {
         const imageData = new FormData();
